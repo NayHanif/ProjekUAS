@@ -14,8 +14,8 @@
         </div>
         <div class="container-fluid d-flex justify-content-end">
           <div class="navbar-nav">
-            <a class="nav-link" href="#">Register</a>
-            <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i></a>
+            <a class="nav-link" href="<?= base_url()?>/register">Register</a>
+            <a class="nav-link" href="<?= base_url()?>/login"><i class="bi bi-box-arrow-in-right"></i></a>
           </div>
         </div>
         <!-- End of Nav 1 -->
