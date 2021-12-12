@@ -30,7 +30,13 @@
                                             <td><?=$row['judul']?></td>
                                             <td><?=$row['penulis']?></td>
                                             <td><?=$row['isi']?></td>
-                                            <td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                                            <td>
+                                                <form action="<?= base_url() ?>/artikels/hapus/<?= $row['id']?>" method="POST">
+                                                    <?= csrf_field();?>
+                                                    <input type="hidden" name="_method"></input>
+                                                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                                </form>
+                                            </td>
                                         </tr>         
                                     <?php endforeach; ?>                         
                                     </tbody>

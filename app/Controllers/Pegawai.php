@@ -21,4 +21,5 @@ class Pegawai extends BaseController
             return redirect()->to(base_url('/login'))->with('error', "Invalid Credential");
         }
     }
+
 }

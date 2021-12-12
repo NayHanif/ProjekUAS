@@ -21,4 +21,10 @@ class Artikels extends BaseController
             return redirect()->to(base_url('/login'))->with('error', "Invalid Credential");
         }
     }
+
+    public function hapus($id){
+        $model = new Artikel();
+        $model->delete($id);
+        return redirect()->to('/artikels');
+    }
 }

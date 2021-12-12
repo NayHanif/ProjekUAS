@@ -35,6 +35,10 @@ class Pesanan extends Migration
                 'type'              => 'VARCHAR',
                 'constraint'        => '250',
             ],
+            'Status' => [
+                'type' => 'VARCHAR',
+                'constraint' => '20',
+            ],
         ]);
         $this->forge->addPrimaryKey('username',true);
         $this->forge->createTable('Pesanan');

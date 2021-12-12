@@ -14,7 +14,7 @@ class Pesanan extends Model
     protected $returnType           = 'array';
     protected $useSoftDeletes       = false;
     protected $protectFields        = true;
-    protected $allowedFields        = ['username','namaLengkap','nomorHp','bykPenukaran','kota','alamat'];
+    protected $allowedFields        = ['username','namaLengkap','nomorHp','bykPenukaran','kota','alamat','status'];
 
     // Dates
     protected $useTimestamps        = false;

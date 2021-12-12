@@ -19,9 +19,10 @@
                                             <th>Username</th>
                                             <th>Nama Lengkap</th>
                                             <th>Nomor Hp</th>
-                                            <th>Jumlah Penukaran</th> 
+                                            <th>Jumlah</th> 
                                             <th>Kota</th>                                         
                                             <th>Alamat</th>     
+                                            <th>Status</th>
                                             <th>Aksi</th>                                  
                                         </tr>
                                     </thead>                                  
@@ -34,8 +35,9 @@
                                             <td><?=$row['bykPenukaran']?></td>
                                             <td><?=$row['kota']?></td>
                                             <td><?=$row['alamat']?></td>
-                                            <td><button type="button" class="btn btn-primary"><i class="fas fa-check"></i></button>
-                                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            <td><?=$row['status']?></td>
+                                            <td>
+                                            <button type="button" class="btn btn-primary"><i class="fas fa-check"></i></button>
                                             </td>
                                         </tr>         
                                     <?php endforeach; ?>                         
