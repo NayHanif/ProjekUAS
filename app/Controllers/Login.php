@@ -22,6 +22,7 @@ class Login extends BaseController
         $model = new Users();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
+        $level = $this->request->getVar('level');
 
         /* $data = $model->where([
             'username'=> $username,
@@ -36,7 +37,15 @@ class Login extends BaseController
                     'logged_in' => TRUE,
                 ]);
                 //return redirect()->to(base_url('dashboard_view'));
-                return view('dashboard_view');
+                if($data['level']=='1'){ //Akses admin
+                    return view('view_header');
+                    return view('view_pegawai_list');
+ 
+                 }else{ //akses mahasiswa
+                    return view('dashboard_view');
+                 }
+ 
+                //return view('dashboard_view');
             }
             else{
                 session()->setFlashdata("error","username dan password salah");
