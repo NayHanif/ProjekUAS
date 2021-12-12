@@ -33,12 +33,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->group('skill', ['filter' => 'authfilter'], function($routes) {
+$routes->group('skill', ['filter' => 'authfilter'], function ($routes) {
     $routes->get('/', 'Skill::index');
     $routes->get('add', 'Skill::add');
     $routes->post('add', 'Skill::store');
 });
-   
+
 $routes->get('/dashboard', 'Home::index', ['filter' => 'authfilter']);
 $routes->get('/pegawai', 'Pegawai::index', ['filter' => 'authfilter']);
 /*
