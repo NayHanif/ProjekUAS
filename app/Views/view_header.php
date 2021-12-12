@@ -21,13 +21,13 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Aplikasi Pegawai</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataproduk-submenu" aria-expanded="false" aria-controls="dataproduk-submenu">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Data Pesanan
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>                         
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#datauser-submenu" aria-expanded="false" aria-controls="datauser-submenu">
+                                <a class="nav-link" href="../Users">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Data Pesanan
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>                         
+                                <a class="nav-link" href="../pegawai">
+                                    <div class="sb-nav-link-icon" ><i class="fas fa-columns"></i></div>
                                     Data User
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
