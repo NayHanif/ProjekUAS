@@ -43,7 +43,7 @@ class Login extends BaseController
                     $model = new Pesanan();
                     $data['pesanan'] = $model->findAll();
                     echo view('view_header.php');
-                    #echo view('view_pegawai_list', $data);
+                    echo view('view_dashboard');
  
                  }else{ //akses mahasiswa
                     return view('dashboard_view');

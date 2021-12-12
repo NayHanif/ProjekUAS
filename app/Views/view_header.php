@@ -13,14 +13,14 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav sb-nav-fixed navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="#">Reminyak Admin</a>
+            <a class="navbar-brand ps-3" href="<?= base_url()?>/login/submitLogin">Reminyak Admin</a>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Aplikasi Pegawai</div>
+                            <div class="sb-sidenav-menu-heading">Halaman Admin</div>
                                 <a class="nav-link" href="../Users">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Data Pesanan
