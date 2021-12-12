@@ -28,6 +28,10 @@ class Pegawai extends Migration
                 'type'              => 'INT',
                 'constraint'        => 8,
             ],
+            'level' => [
+                'type'              => 'INT',
+                'constraint'        => 2,
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('pegawai');
