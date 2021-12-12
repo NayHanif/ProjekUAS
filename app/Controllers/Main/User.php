@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class User extends BaseController
 {
-  public function index($id = 0)
+  public function index($id = 1)
   {
     $data = [
       'title' => 'Home | Reminyak.id',
@@ -16,7 +16,7 @@ class User extends BaseController
     return view('pages/home', $data);
   }
 
-  public function about($id = 0)
+  public function about($id = 1)
   {
     $data = [
       'title' => 'About | Reminyak.id',
@@ -27,7 +27,7 @@ class User extends BaseController
     return view('pages/about', $data);
   }
 
-  public function article($id = 0)
+  public function article($id = 1)
   {
     $data = [
       'title' => 'Articles | Reminyak.id',
