@@ -15,6 +15,8 @@ class Artikel extends Migration
             'id' => [
                 'type' => 'INT',
                 'constraint' => '3',
+                'unsigned' => true,
+                'auto_increment' => true
             ],
             'judul' => [
                 'type' => 'VARCHAR',
@@ -29,7 +31,7 @@ class Artikel extends Migration
                 'constraint' => '500',
             ],
         ]);
-        $this->forge->addPrimaryKey('id',true);
+        $this->forge->addPrimaryKey('id', true);
         $this->forge->createTable('Artikel');
     }
 
