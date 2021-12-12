@@ -39,7 +39,7 @@ class Users extends Migration
                 'constraint'        => '2',
             ],
         ]);
-        $this->forge->addPrimaryKey('username',true);
+        $this->forge->addPrimaryKey('username', true);
         $this->forge->createTable('Users');
     }
 
