@@ -2,33 +2,38 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Data Produk</h1>
+                        <h1 class="mt-4">Data Pesanan</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Data Pegawai</li>
+                            <li class="breadcrumb-item active">Data Pesanan</li>
                         </ol>                       
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                List Data Produk
+                                List Data Pesanan
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Nama Pegawai</th>
-                                            <th>Jabatan</th>
-                                            <th>Gaji</th>                                         
+                                            <th>Username</th>
+                                            <th>Nama Lengkap</th>
+                                            <th>Nomor Hp</th>
+                                            <th>Jumlah Penukaran</th> 
+                                            <th>Kota</th>                                         
+                                            <th>Alamat</th>                                       
                                         </tr>
                                     </thead>                                  
                                     <tbody>
-                                    <?php foreach ($pegawai as $row): ?>
+                                    <?php foreach ($pesanan as $row): ?>
                                         <tr>
-                                            <td><?= $row['id'] ?></td>
-                                            <td><?= $row['namapegawai'] ?></td>
-                                            <td><?= $row['jabatan'] ?></td>
-                                            <td><?= $row['gaji'] ?></td>
+                                            <td><?=$row['username']?></td>
+                                            <td><?=$row['namaLengkap']?></td>
+                                            <td><?=$row['nomorHp']?></td>
+                                            <td><?=$row['bykPenukaran']?></td>
+                                            <td><?=$row['kota']?></td>
+                                            <td><?=$row['alamat']?></td>
+
                                         </tr>         
                                     <?php endforeach; ?>                         
                                     </tbody>

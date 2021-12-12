@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\Users;
+use App\Models\Pesanan;
+
 
 class Login extends BaseController
 {
@@ -38,8 +40,10 @@ class Login extends BaseController
                 ]);
                 //return redirect()->to(base_url('dashboard_view'));
                 if($data['level']=='1'){ //Akses admin
-                    return view('view_header');
-                    return view('view_pegawai_list');
+                    $model = new Pesanan();
+                    $data['pesanan'] = $model->findAll();
+                    echo view('view_header.php');
+                    echo view('view_pegawai_list', $data);
  
                  }else{ //akses mahasiswa
                     return view('dashboard_view');

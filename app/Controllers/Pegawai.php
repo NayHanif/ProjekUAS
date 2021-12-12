@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\PegawaiModel;
+use App\Models\Users;
 
 class Pegawai extends BaseController
 {
