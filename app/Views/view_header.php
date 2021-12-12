@@ -25,7 +25,7 @@
                             <div class="sb-sidenav-menu-heading">Aplikasi Pegawai</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataproduk-submenu" aria-expanded="false" aria-controls="dataproduk-submenu">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Data Produk
+                                Data Pesanan
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                                 <div class="collapse" id="dataproduk-submenu" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">

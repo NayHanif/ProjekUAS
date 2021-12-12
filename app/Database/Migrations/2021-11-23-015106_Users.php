@@ -36,10 +36,10 @@ class Users extends Migration
             ],
             'level' => [
                 'type'              => 'INT',
-                'constraint'        => 2,
+                'constraint'        => '2',
             ],
         ]);
-        $this->forge->addPrimaryKey('Username',true);
+        $this->forge->addPrimaryKey('username',true);
         $this->forge->createTable('Users');
     }
 
