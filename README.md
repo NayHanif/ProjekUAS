@@ -1,4 +1,3 @@
 # Projek UAS
----
-### - Anayah Hanifah Elsyaf
-### - Alzidan Zulfan Amiraz
+- Anayah Hanifah Elsyaf
+- Alzidan Zulfan Amiraz
