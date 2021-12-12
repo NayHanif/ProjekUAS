@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use App\Models\Users;
 
@@ -10,16 +11,16 @@ class Register extends BaseController
     {
         //echo "ini adalah halaman registrasi";
         echo view('register_view');
-    
     }
-    public function submitRegister(){
-        
+    public function submitRegister()
+    {
+
         //buat model untuk proses insert ke table users
         $model = new Users();
         $password = $this->request->getVar('password');
         $cpassword = $this->request->getVar('cpassword');
-        
-        if(!$this->validate([
+
+        if (!$this->validate([
             'username' => [
                 'rules' => 'required|is_unique[users.username]',
                 'errors' => [
@@ -54,21 +55,21 @@ class Register extends BaseController
                     'required' => '{field} harus diisi',
                 ]
             ],
-        ])){
+        ])) {
             $validation = \Config\Services::validation();
             $dataErr = [
-                'validation' =>\Config\Services::validation()
+                'validation' => \Config\Services::validation()
             ];
-            session()->setFlashdata("error",[$dataErr]);
+            session()->setFlashdata("error", [$dataErr]);
             //dd($validation);
             return redirect()->to('/register')->withInput()->with('validation', $validation);
         }
 
 
-        if(strcmp($password,$cpassword)==0){
+        if (strcmp($password, $cpassword) == 0) {
             $data = [
                 'username' => $this->request->getVar('username'),
-                'password' => password_hash($this->request->getVar('password'),PASSWORD_DEFAULT),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'namadepan' => $this->request->getVar('namadepan'),
                 'namabelakang' => $this->request->getVar('namabelakang'),
             ];
@@ -80,9 +81,8 @@ class Register extends BaseController
             // } else{
             //     echo "data tidak berhasil disimpan";
             // }
-        }
-        else {
+        } else {
             return redirect()->back()->withInput();
-        } 
+        }
     }
 }

@@ -41,6 +41,13 @@ $routes->group('skill', ['filter' => 'authfilter'], function ($routes) {
 
 $routes->get('/dashboard', 'Home::index', ['filter' => 'authfilter']);
 $routes->get('/pegawai', 'Pegawai::index', ['filter' => 'authfilter']);
+
+// INI ROUTES TESTING NYA KEVIN YAAAAA
+$routes->get('/home', 'Main\User::index');
+$routes->get('/about', 'Main\User::about');
+$routes->get('/article', 'Main\User::article');
+$routes->get('/tukar', 'Main\User::form');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
