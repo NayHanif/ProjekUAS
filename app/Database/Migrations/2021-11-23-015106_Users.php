@@ -34,6 +34,10 @@ class Users extends Migration
                 'type' => 'DATETIME',
                 'null' => 'true',
             ],
+            'level' => [
+                'type'              => 'INT',
+                'constraint'        => 2,
+            ],
         ]);
         $this->forge->addPrimaryKey('Username',true);
         $this->forge->createTable('Users');
