@@ -41,8 +41,9 @@
           <input type="text" class="form-control" id="namabelakang" placeholder="Masukkan Nama Depan" name="namabelakang" value="<?= old('namabelakang') ?>">
           <label for="namabelakang">Nama Belakang</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </form>
+      <a href="<?= base_url() ?>/login">Sudah punya akun?</a>
     </div>
     <div class="col"></div>
   </div>

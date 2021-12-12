@@ -21,4 +21,14 @@ class Users extends BaseController
             return redirect()->to(base_url('/login'))->with('error', "Invalid Credential");
         }
     }
+
+        public function edit($username){
+            $status = 'Terpenuhi';
+            $model = new Pesanan();
+            $model->set('status', $status);
+            $model->where('username', $username);
+            $model->update();
+
+            return redirect()->to('/users');
+        }
 }

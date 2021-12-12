@@ -37,7 +37,7 @@
                                             <td><?=$row['alamat']?></td>
                                             <td><?=$row['status']?></td>
                                             <td>
-                                            <button type="button" class="btn btn-primary"><i class="fas fa-check"></i></button>
+                                            <a href="<?= base_url() ?>/users/edit/<?= $row['username']?>"><button type="button" class="btn btn-primary"><i class="fas fa-check"></i></button></a>
                                             </td>
                                         </tr>         
                                     <?php endforeach; ?>                         

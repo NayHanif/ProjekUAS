@@ -72,6 +72,7 @@ class Register extends BaseController
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'namadepan' => $this->request->getVar('namadepan'),
                 'namabelakang' => $this->request->getVar('namabelakang'),
+                'level' => '2',
             ];
             $model->insert($data);
             return redirect()->to(base_url('login'));

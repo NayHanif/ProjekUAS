@@ -30,8 +30,9 @@
           <input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password">
           <label for="password">Password</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </form>
+      <a href="<?= base_url() ?>/register">Belum punya akun?</a>
     </div>
     <div class="col"></div>
     
