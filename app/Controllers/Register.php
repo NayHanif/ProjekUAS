@@ -10,7 +10,10 @@ class Register extends BaseController
     public function index()
     {
         //echo "ini adalah halaman registrasi";
-        echo view('register_view');
+        $data = [
+            'title' => 'Register | Reminyak.id'
+        ];
+        return view('register_view', $data);
     }
     public function submitRegister()
     {

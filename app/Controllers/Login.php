@@ -11,12 +11,16 @@ class Login extends BaseController
 {
     public function index()
     {
-        echo view('login_view');
+        $data = [
+            'title' => 'Login | Reminyak.id'
+        ];
+        return view('login_view', $data);
     }
 
-    public function logout(){
+    public function logout()
+    {
         session()->destroy();
-        session()->setFlashdata("error","Anda berhasil logout");
+        session()->setFlashdata("error", "Anda berhasil logout");
         return redirect()->to(base_url('login'));
     }
     public function submitLogin()
@@ -31,35 +35,31 @@ class Login extends BaseController
             ])->first(); */
         $data = $model->where('username', $username)->first();
 
-        if($data){
-            if(password_verify($password, $data['password'])){
+        if ($data) {
+            if (password_verify($password, $data['password'])) {
                 session()->set([
                     'namadepan' => $data['namadepan'],
                     'namabelakang' => $data['namabelakang'],
                     'logged_in' => TRUE,
                 ]);
                 //return redirect()->to(base_url('dashboard_view'));
-                if($data['level']=='1'){ //Akses admin
+                if ($data['level'] == '1') { //Akses admin
                     $model = new Pesanan();
                     $data['pesanan'] = $model->findAll();
                     echo view('view_header.php');
                     echo view('view_dashboard');
- 
-                 }else{ //akses mahasiswa
+                } else { //akses mahasiswa
                     return view('dashboard_view');
-                 }
- 
+                }
+
                 //return view('dashboard_view');
-            }
-            else{
-                session()->setFlashdata("error","username dan password salah");
+            } else {
+                session()->setFlashdata("error", "username dan password salah");
                 return redirect()->back();
             }
-        }
-        else{
-            session()->setFlashdata("error","username dan password salah");
+        } else {
+            session()->setFlashdata("error", "username dan password salah");
             return redirect()->back();
         }
     }
-    
 }
