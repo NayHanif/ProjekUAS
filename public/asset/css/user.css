@@ -5,6 +5,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   /* font-family: "Quicksand", sans-serif; */
   /* font-family: "Poppins", sans-serif; */
   font-family: "Open Sans", sans-serif;
@@ -13,4 +14,20 @@
 .logo {
   width: 50px;
   margin-left: 15px;
+}
+
+.frames {
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 872px) {
+  .frames {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 872px) {
+  .frames {
+    max-width: 50%;
+  }
 }
