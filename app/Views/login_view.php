@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<?= $this->extend('layout/template'); ?>
 
+<?= $this->section('content'); ?>
 <div class="container mt-3">
-  
+
   <div class="row pt-5">
     <div class="col"></div>
     <div class="col p-3 border border-success">
       <h2>Login User</h2>
-        <p>Masukkan username dan password pada formulir di bawah ini:</p>
-        <?php if (!empty(session()->getFlashdata('error'))): ?>
-          <div class="alert alert-warning alert-dismissible">
-              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              <?= session()->getFlashdata('error');?>
-          </div>
-        <?php endif; ?>
+      <p>Masukkan username dan password pada formulir di bawah ini:</p>
+      <?php if (!empty(session()->getFlashdata('error'))) : ?>
+        <div class="alert alert-warning alert-dismissible">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <?= session()->getFlashdata('error'); ?>
+        </div>
+      <?php endif; ?>
       <form action="<?= base_url() ?>/login/submitLogin" method="POST">
         <div class="form-floating mb-3 mt-3">
           <input type="text" class="form-control" id="username" placeholder="Masukkan username" name="username">
@@ -35,10 +28,8 @@
       <a href="<?= base_url() ?>/register">Belum punya akun?</a>
     </div>
     <div class="col"></div>
-    
+
   </div>
-    
+
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?= $this->endSection(); ?>

@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <?php if ($id == 0) : ?>
+      <?php if (!session()->get('logged_in')) : ?>
         <!-- Nav 1 -->
         <div class="navbar-nav">
           <a class="nav-link active" href="<?= base_url(); ?>/">Home</a>

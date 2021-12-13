@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Register</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<?= $this->extend('layout/template'); ?>
 
+<?= $this->section('content'); ?>
 <div class="container mt-3">
   <div class="row">
     <div class="col"></div>
     <div class="col p-3 border border-success">
       <h2>Registrasi User</h2>
       <p>Lengkapi isian formulir di bawah ini:</p>
-      <?php if (!empty(session()->getFlashdata('error'))): ?>
+      <?php if (!empty(session()->getFlashdata('error'))) : ?>
         <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            <?= \Config\Services::validation()->listErrors(); ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <?= \Config\Services::validation()->listErrors(); ?>
         </div>
       <?php endif; ?>
       <form action="<?= base_url() ?>/register/submitRegister" method="POST">
@@ -47,8 +40,7 @@
     </div>
     <div class="col"></div>
   </div>
-  
+
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+<?= $this->endSection(); ?>
