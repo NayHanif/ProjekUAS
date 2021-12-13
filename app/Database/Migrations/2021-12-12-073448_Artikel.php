@@ -27,8 +27,7 @@ class Artikel extends Migration
                 'constraint' => '50',
             ],
             'isi' => [
-                'type' => 'VARCHAR',
-                'constraint' => '500',
+                'type' => 'TEXT',
             ],
         ]);
         $this->forge->addPrimaryKey('id', true);

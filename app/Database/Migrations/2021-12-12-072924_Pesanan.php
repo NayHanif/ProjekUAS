@@ -8,10 +8,10 @@ class Pesanan extends Migration
 {
     public function up()
     {
-         //buat skema tabel pesanan
-         // username (string 50 primary), nama lengkap (string 100), nomorHp (int 16), 
-         // bykPenukaran (int 10), kota (string 50), alamat (string 250) 
-         $this->forge->addField([
+        //buat skema tabel pesanan
+        // username (string 50 primary), nama lengkap (string 100), nomorHp (int 16), 
+        // bykPenukaran (int 10), kota (string 50), alamat (string 250) 
+        $this->forge->addField([
             'username' => [
                 'type' => 'VARCHAR',
                 'constraint' => '50',
@@ -31,7 +31,7 @@ class Pesanan extends Migration
             'kota' => [
                 'type'              => 'VARCHAR',
                 'constraint'        => '50',
-            ],'alamat' => [
+            ], 'alamat' => [
                 'type'              => 'VARCHAR',
                 'constraint'        => '250',
             ],
@@ -40,7 +40,7 @@ class Pesanan extends Migration
                 'constraint' => '20',
             ],
         ]);
-        $this->forge->addPrimaryKey('username',true);
+        $this->forge->addPrimaryKey('username', true);
         $this->forge->createTable('Pesanan');
     }
 
