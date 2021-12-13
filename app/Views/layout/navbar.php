@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm my-2">
+<nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top shadow-sm my-2">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home"><img src="/asset/img/logo2.png" alt="" class="logo"></a>
+    <a class="navbar-brand" href="<?= base_url(); ?>/"><img src="/asset/img/logo2.png" alt="" class="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,24 +8,24 @@
       <?php if ($id == 0) : ?>
         <!-- Nav 1 -->
         <div class="navbar-nav">
-          <a class="nav-link active" href="/home">Home</a>
-          <a class="nav-link" href="/article">Articles</a>
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link active" href="<?= base_url(); ?>/">Home</a>
+          <a class="nav-link" href="<?= base_url(); ?>/article">Articles</a>
+          <a class="nav-link" href="<?= base_url(); ?>/about">About</a>
         </div>
         <div class="container-fluid d-flex justify-content-end">
           <div class="navbar-nav">
-            <a class="nav-link" href="<?= base_url()?>/register">Register</a>
-            <a class="nav-link" href="<?= base_url()?>/login"><i class="bi bi-box-arrow-in-right"></i></a>
+            <a class="nav-link" href="<?= base_url(); ?>/register">Register</a>
+            <a class="nav-link" href="<?= base_url(); ?>/login"><i class="bi bi-box-arrow-in-right"></i></a>
           </div>
         </div>
         <!-- End of Nav 1 -->
       <?php else :  ?>
         <!-- Nav 2 -->
         <div class="navbar-nav">
-          <a class="nav-link active" href="/home">Home</a>
-          <a class="nav-link" href="/article">Articles</a>
-          <a class="nav-link" href="/about">About</a>
-          <a class="nav-link" href="/tukar">Tukar</a>
+          <a class="nav-link active" href="<?= base_url(); ?>/">Home</a>
+          <a class="nav-link" href="<?= base_url(); ?>/article">Articles</a>
+          <a class="nav-link" href="<?= base_url(); ?>/about">About</a>
+          <a class="nav-link" href="<?= base_url(); ?>/tukar">Tukar</a>
         </div>
         <div class="container-fluid w-75 d-flex justify-content-end">
           <div class="navbar-nav">
