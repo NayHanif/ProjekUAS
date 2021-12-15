@@ -11,6 +11,7 @@
   <?php endif; ?>
 
   <div class="hero-ctn container rounded bg-success text-center p-3 shadow">
+    <!-- Hero Section -->
     <h2 class="text-light">Lorem ipsum dolor sit amet consectetur.</h2>
     <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur recusandae, reiciendis, cupiditate debitis, vel neque atque eius error similique impedit suscipit expedita libero asperiores aperiam! Nobis dolores iste deleniti labore.</p>
     <small class="text-light">Lorem, ipsum dolor.</small>
