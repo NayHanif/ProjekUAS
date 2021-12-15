@@ -16,12 +16,10 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
-        'csrf' => \CodeIgniter\Filters\CSRF::class,
-        'toolbar' => \CodeIgniter\Filters\DebugToolbar::class,
-        'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-        'authfilter' => \App\Filters\Auth::class
+        'csrf'     => CSRF::class,
+        'toolbar'  => DebugToolbar::class,
+        'honeypot' => Honeypot::class,
     ];
-        
 
     /**
      * List of filter aliases that are always

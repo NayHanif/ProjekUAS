@@ -31,21 +31,34 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Main\User::index');
 
-$routes->group('skill', ['filter' => 'authfilter'], function ($routes) {
-    $routes->get('/', 'Skill::index');
-    $routes->get('add', 'Skill::add');
-    $routes->post('add', 'Skill::store');
-});
+// Routes for Homepage
+$routes->get('/', 'Home::index');
+$routes->get('/about', 'Home::about');
+$routes->get('/services', 'Home::services');
+$routes->get('/login', 'Home::login');
+$routes->get('/register', 'Home::register');
+$routes->get('/article', 'Article::article');
 
-$routes->get('/dashboard', 'Home::index', ['filter' => 'authfilter']);
-$routes->get('/pegawai', 'Pegawai::index', ['filter' => 'authfilter']);
+$routes->get('/article/(:any)', 'Article::articlePage/$1');
 
-// INI ROUTES TESTING NYA KEVIN YAAAAA
-$routes->get('/about', 'Main\User::about');
-$routes->get('/article', 'Main\User::article');
-$routes->get('/tukar', 'Main\User::form');
+// Routes for User
+$routes->get('/dashboard/(:any)', 'User::dashboard/$1');
+$routes->get('/tukar/(:any)', 'User::tukar/$1');
+$routes->get('/profile/(:any)', 'User::profile/$1');
+
+$routes->get('/destroy', 'Auth::destroy');
+
+// Routes for Admin
+$routes->get('/admin', 'Admin::userList');
+$routes->get('/admin/user-list', 'Admin::userList');
+$routes->get('/admin/tukar-list', 'Admin::tukarList');
+$routes->get('/admin/create-article', 'Admin::createArticle');
+$routes->get('/admin/tukar/(:any)', 'Admin::button/$1');
+$routes->get('/tukar/button/(:any)', 'Tukar::button/$1');
+$routes->get('/admin/article', 'Admin::article');
+$routes->get('/admin/article-list', 'Admin::articleList');
+$routes->get('/admin/article/(:any)', 'Admin::deleteArticle/$1');
 
 /*
  * --------------------------------------------------------------------

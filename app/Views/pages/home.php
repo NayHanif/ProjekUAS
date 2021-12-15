@@ -2,62 +2,66 @@
 
 <?= $this->section('content'); ?>
 
-<!-- Wrapper -->
-<div class="container-fluid wrapper">
-  <div class="row">
-    <div class="col-12">
+<div class="wrapper container-fluid my-4">
 
-      <!-- Hero Section -->
-      <div class="container rounded mt-3 hero-img bg-light p-3 text-center">
-        <h2 class="display-6 fw-bold">Lorem ipsum dolor sit amet.</h2>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, velit.</p>
-        <p class="lead">Ea autem totam dolores corrupti veritatis voluptatum mollitia culpa iste!</p>
-      </div>
-      <!-- End of Hero Section -->
-
+  <?php if (session()->getFlashdata('pesan')) : ?>
+    <div class="alert alert-success text-center my-3" role="alert">
+      <?= session()->getFlashdata('pesan'); ?>
     </div>
+  <?php endif; ?>
+
+  <div class="hero-ctn container rounded bg-success text-center p-3 shadow">
+    <h2 class="text-light">Lorem ipsum dolor sit amet consectetur.</h2>
+    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur recusandae, reiciendis, cupiditate debitis, vel neque atque eius error similique impedit suscipit expedita libero asperiores aperiam! Nobis dolores iste deleniti labore.</p>
+    <small class="text-light">Lorem, ipsum dolor.</small>
   </div>
 
-  <div class="row mt-4">
-    <!-- Article Section -->
-    <div class="col-12 col-sm-8 col-md-8 col-lg-9">
-      <div class="container article-ctn">
-        <h2 class="m-2 fw-bold fst-italic text-success">Articles</h2>
-        <hr>
-        <div class=" row">
-          <div class="col">
-            <h2 class="fw-bold fst-6">Limbah Minyak Berserakan Di Segala Penjuru Dunia</h2>
-            <p class="text-muted">By : Penulis</p>
+  <!-- Content Section -->
+  <div class="content-ctn container-fluid my-4">
+    <div class="row">
+      <!-- Article -->
+      <div class="col-12 col-sm-8 col-md-8 col-xl-7">
+        <h2 class="text-success">Articles</h2>
+        <?php $i = 1; ?>
+        <?php foreach ($list as $l) : ?>
+          <?php $i++; ?>
+          <?php if ($i == 5) {
+            break;
+          } ?>
+          <div class="article my-2">
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit esse similique odit molestias illo ducimus aspernatur. Accusantium dicta architecto sapiente.</p>
+            <h3><?= $l['judul']; ?></h3>
+            <small><?= $l['penulis']; ?></small>
+            <hr>
+            <p><?= $l['isi1']; ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+      <!-- End of Article -->
+
+      <!-- Sidebar -->
+      <div class="col-12 col-sm-4 col-md-4 col-xl-5 sticky-top">
+        <div class="card w-100">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Button</a>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col">
-            <h2 class="fw-bold fst-6">Limbah Minyak Berserakan Di Segala Penjuru Dunia</h2>
-            <p class="text-muted">By : Penulis</p>
-            <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit esse similique odit molestias illo ducimus aspernatur. Accusantium dicta architecto sapiente.</p>
+        <div class="mt-4"></div>
+        <div class="card w-100">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Button</a>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Sidebar Section -->
-    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
-      <h5 class="fw-bold mt-2 text-center">Tukar Limbah Minyak Anda</h2>
-        <div class="container sidebar-ctn bg-success rounded py-2 text-light">
-          <p class="lead fs-6 text-center">Lokasi Pembuangan</p>
-          <ul>
-            <li>Jakarta</li>
-            <li>Bekasi</li>
-            <li>Tangerang Selatan</li>
-          </ul>
-        </div>
+      <!-- End of Sidebar -->
     </div>
   </div>
+  <!-- End of Content Section -->
 
-  <!-- End of Wrapper -->
 </div>
 
 <?= $this->endSection(); ?>
