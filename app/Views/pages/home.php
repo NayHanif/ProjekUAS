@@ -43,8 +43,14 @@
       <div class="col-12 col-sm-4 col-md-4 col-xl-5 sticky-top">
         <div class="card w-100">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">Tukar Limbah Minyak</h5>
+            <p class="card-text">
+              <ul>
+                <li>Jakarta</li>
+                <li>Bekasi</li>
+                <li>Tangerang Selatan</li>
+              </ul>
+            </p>
             <a href="#" class="btn btn-success">Button</a>
           </div>
         </div>
